@@ -1,19 +1,28 @@
-Circuit Diagram:
+Connections:
+FlySky Receiver to Arduino:
 
-Relay - ARDUINO:
-ENA --- 5
-ENB --- 6
-IN1 --- 2
-IN2 --- 3
-IN3 --- 4
-IN4 --- 7
+Connect the FlySky receiver's VCC pin to the Arduino's 5V pin.
+Connect the FlySky receiver's GND pin to the Arduino's GND pin.
+Connect the FlySky receiver's CH1 (Throttle) to Arduino pin A0.
+Connect the FlySky receiver's CH2 (Steering) to Arduino pin A1.
+Connect additional channels as needed to pins A2, A3, A4, and A5.
+Relay Module to Arduino:
 
-RECEIVER -- ARDUINO:
-CH1 --- A0
-CH2 --- A1
-CH3 --- A2
-CH4 --- A3
-CH5 --- A4
-CH6 --- A5
-VCC --- VCC
-GND --- GND
+Connect the relay module's VCC pin to the Arduino's 5V pin.
+Connect the relay module's GND pin to the Arduino's GND pin.
+Connect the relay module's IN1 to Arduino pin 6.
+Connect the relay module's IN2 to Arduino pin 7.
+Connect the relay module's IN3 to Arduino pin 8.
+Connect the relay module's IN4 to Arduino pin 9.
+Motors to Relay Module:
+
+Left Motors:
+Connect the positive terminal of the left front motor to the NO terminal of relay 1.
+Connect the positive terminal of the left rear motor to the NO terminal of relay 2.
+Connect the negative terminals of both left motors to a common ground.
+Right Motors:
+Connect the positive terminal of the right front motor to the NO terminal of relay 3.
+Connect the positive terminal of the right rear motor to the NO terminal of relay 4.
+Connect the negative terminals of both right motors to a common ground.
+Connect the COM terminals of all relays to the positive terminal of the power supply for the motors (e.g., battery positive).
+This setup ensures that the RC car can be controlled using the FlySky FS-i6X transmitter, and the relay module properly handles the motors' forward and backward movement. Adjust the motor control logic as needed based on your specific motor configuration and relay setup.
